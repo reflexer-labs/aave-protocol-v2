@@ -114,7 +114,8 @@ contract UiPoolDataProvider is IUiPoolDataProvider {
         reserveData.isActive,
         reserveData.isFrozen,
         reserveData.borrowingEnabled,
-        reserveData.stableBorrowRateEnabled
+        reserveData.stableBorrowRateEnabled,
+        reserveData.isPaused
       ) = baseData.configuration.getFlagsMemory();
       reserveData.usageAsCollateralEnabled = reserveData.baseLTVasCollateral != 0;
       (
