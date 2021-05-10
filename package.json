@@ -33,6 +33,7 @@
     "test-liquidate": "hardhat test test-suites/test-aave/__setup.spec.ts test-suites/test-aave/liquidation-atoken.spec.ts",
     "test-deploy": "hardhat test test-suites/test-aave/__setup.spec.ts test-suites/test-aave/test-init.spec.ts",
     "test-pausable": "hardhat test test-suites/test-aave/__setup.spec.ts test-suites/test-aave/pausable-functions.spec.ts",
+    "test-reserve-pause": "hardhat test test-suites/test-aave/__setup.spec.ts test-suites/test-aave/reserve-pause.spec.ts",
     "test-permit": "hardhat test test-suites/test-aave/__setup.spec.ts test-suites/test-aave/atoken-permit.spec.ts",
     "test-stable-and-atokens": "hardhat test test-suites/test-aave/__setup.spec.ts test-suites/test-aave/atoken-transfer.spec.ts test-suites/test-aave/stable-token.spec.ts",
     "test-subgraph:scenarios": "hardhat --network hardhatevm_docker test test-suites/test-aave/__setup.spec.ts test-suites/test-aave/subgraph-scenarios.spec.ts",
