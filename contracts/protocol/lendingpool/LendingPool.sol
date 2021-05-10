@@ -407,7 +407,7 @@ contract LendingPool is VersionedInitializable, ILendingPool, LendingPoolStorage
   ) external override whenNotPaused {
     FlashLoanLocalVars memory vars;
 
-    ValidationLogic.validateFlashloan(assets, amounts);
+    ValidationLogic.validateFlashloan(assets, amounts, _reserves);
 
     address[] memory aTokenAddresses = new address[](assets.length);
     uint256[] memory premiums = new uint256[](assets.length);
@@ -663,6 +663,7 @@ contract LendingPool is VersionedInitializable, ILendingPool, LendingPoolStorage
     require(msg.sender == _reserves[asset].aTokenAddress, Errors.LP_CALLER_MUST_BE_AN_ATOKEN);
 
     ValidationLogic.validateTransfer(
+      asset,
       from,
       _reserves,
       _usersConfig[from],
